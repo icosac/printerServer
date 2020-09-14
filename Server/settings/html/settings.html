@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if error %}
+<h1>Errore: </h1>
+<p>{{ error }}</p>
+{% endif %}
+
+<a href="restart">Riavvia server</a>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="/">Torna alla pagina iniziale</a>
+
+{% endblock %}
+

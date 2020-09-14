@@ -1,0 +1,8 @@
+sudo pacman -S cups hplip
+sudo systemctl enable --now org.cups.cupsd.service
+
+#Use lynx to set the new printer
+
+lpoptions -d <name>
+
+#Now it should already be working

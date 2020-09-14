@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if error %}
+<h1>Errore: </h1><br>
+<p>{{ error }}</p>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.File }}
+
+  <br><br>Orientamento: {{ form.direction }} 
+
+  <br><br> Stampa a colori o in biano e nero: {{ form.color }}
+
+  <br><br>Numero di copie: {{ form.nCopies }}
+
+  <br><br>Pagine da stampare: {{ form.pages }} <br> Altrimenti specificare singole pagine separate da virgole oppure intervalli di pagine con trattino: 1,2 stampa le pagine 1 e 2, 1-3 stampa le pagine dall'1 alla 3 comprese, 1-3,5-8 stampa le pagine dall'1 alla 3 e dalla 5 alla 8 comprese.
+
+  <br><br><button type="submit">Stampa</button><br><br>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="/settings">Impostazioni</a>
+
+{% endblock %}
+
