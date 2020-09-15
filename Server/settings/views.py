@@ -15,7 +15,8 @@ def readCommandError(command, err):
 
 def restartServer(request):
     err=""
-    err=readCommandError("cupsdisable HP_Officejet_5615", err)
+    err=readCommandError("lprm -", err)
+    err=readCommandError("cupsdisable -c HP_Officejet_5615", err)
     err=readCommandError("cupsenable HP_Officejet_5615", err)
     if err!="":
         return render(request, "html/settings.html", {"error" : err} )

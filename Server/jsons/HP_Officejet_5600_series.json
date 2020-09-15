@@ -1,0 +1,5 @@
+{ 
+  "name" : "HP_Officejet_5615",
+  "colors" : ["NormalRGB", "NormalGray", "DraftRGB", "DraftGray", "Photo"],
+  "PageSize" : ["Card3x5", "Hagaki", "Hagaki.FB", "Photo4x6", "Photo4x6.FB", "A6", "Photo5x7", "Card5x8", "Oufuku", "A5", "B5", "JB5", "Executive", "16k", "Letter", "A4", "ExecutiveJIS", "FLSA", "Legal", "EnvA2", "EnvC6", "EnvChou4", "EnvMonarch", "EnvDL", "Env10", "EnvChou3", "EnvC5", "EnvB5"]
+}

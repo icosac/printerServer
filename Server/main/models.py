@@ -10,10 +10,11 @@ class printFormModel(models.Model):
     File=models.FileField(blank=False, upload_to=addDate)
 
     def __str__(self):
+        print(self.color)
         if self.pages=="Tutte":
-            return ("lp -o "+self.direction+" -o"+self.color+" -n "+str(self.nCopies))
+            return ("lp -o "+self.direction+" -oOutputMode="+self.color+" -n "+str(self.nCopies))
         else:
-            return ("lp -o "+self.direction+" -o"+self.color+" -n "+str(self.nCopies)+" -P "+str(self.pages))
+            return ("lp -o "+self.direction+" -oOutputMode="+self.color+" -n "+str(self.nCopies)+" -P "+str(self.pages))
             
     def command (self):
         return (str(self)+" "+str(self.File))
